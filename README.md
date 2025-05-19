@@ -1,55 +1,110 @@
-HabitTrack CLI
-A simple command-line habit tracker that helps you build and maintain streaks for your daily habits.
-Features
+# 🧠 CLI Habit Tracker
 
-📝 Add new habits to track
-✅ Mark habits as completed or missed
-📊 View your progress and streaks
-🗑️ Delete habits you no longer want to track
-📆 Track habit completion with visual streak indicators
+A simple command-line interface (CLI) habit tracker built with Python. It helps you track your habits, manage streaks, and maintain consistency—all from your terminal!
 
-Installation
+---
 
-Clone this repository:
-git clone https://github.com/yourusername/habit-track-cli.git
-cd habit-track-cli
+## ✨ Features
 
-No additional dependencies required! HabitTrack uses only Python standard libraries.
+- 📌 Add new habits  
+- ✅ Mark habits as done or undone  
+- 📊 View progress and streaks  
+- 🗑️ Delete habits  
+- 💾 Stores data locally in `data.json`  
+- 🧠 Encourages consistency with visual streak tracking  
 
-Usage
-Run the application:
-python habit_tracker.py
-Commands
-The app provides a simple menu-driven interface:
+---
+
+## 📦 Requirements
+
+- Python 3.6+
+- No external libraries needed (uses only built-in Python modules)
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/habit-tracker.git
+   cd habit-tracker
+   ```
+
+2. **Run the habit tracker**
+   ```bash
+   python habit_tracker.py
+   ```
+   > Replace `habit_tracker.py` with your actual Python filename if it's different.
+
+---
+
+## 📂 File Structure
+
+```
+habit-tracker/
+├── data.json           # Stores all habit data (auto-created)
+└── habit_tracker.py    # Main CLI app script
+```
+
+---
+
+## 🧑‍💻 How It Works
+
+When you run the script, you’ll see a menu like this:
+
+```
 What would you like to do?
 --------------------------------------------
 | [1] Add Habit         | [4] Check Menu   |  
 | [2] Edit Habit status | [5] Delete Habit |
 | [3] Show Progress     | [6] Exit         |
 --------------------------------------------
+```
 
-Add Habit (1): Create a new habit to track
-Edit Habit status (2): Mark a habit as completed (✅) or missed (❌) for today
-Show Progress (3): View detailed information about a specific habit including streak
-Check Menu (4): Display the menu again
-Delete Habit (5): Remove a habit from tracking
-Exit (6): Close the application
+### [1] Add Habit
+- Input a new habit name and start tracking from today.
 
-Data Storage
-Your habits are stored locally in a JSON file (data.json) in the same directory as the script.
-Example
---------------------------------------------
--> 1
-Enter the name of the habit : Morning Meditation
-New habit has been added!
---------------------------------------------
--> 3
-* Morning Meditation
-What habit would you like to learn more about? => Morning Meditation
---------------------------------------------
-Habit Name :  Morning Meditation
-Start Date :  2025-05-19
-Streak     :  ✔
-Last Updated 2025-05-19
-Contributing
-Contributions are welcome! Feel free to open issues or submit pull requests.
+### [2] Edit Habit Status
+- Mark a habit as done ✅ or undone ❌ for the current day.
+- Automatically updates the streak and last updated date.
+
+### [3] Show Progress
+- View detailed progress of a habit: start date, current streak, and last updated.
+
+### [4] Check Menu
+- Re-displays the menu at any time.
+
+### [5] Delete Habit
+- Permanently removes a habit from tracking after confirmation.
+
+### [6] Exit
+- Safely exits the tracker.
+
+---
+
+## 📘 Data Format (Example)
+
+```json
+[
+  {
+    "habit": "Exercise",
+    "Start Date": "2025-05-19",
+    "streak": "✔✔❌✔",
+    "Last Updated": "2025-05-19"
+  }
+]
+```
+
+---
+
+## 🛡️ License
+
+This project is licensed under the MIT License. Feel free to use, modify, and share it.
+
+---
+
+## 💡 Future Ideas
+
+- Add visualization with charts  
+- Set habit reminders  
+- Export streak history to CSV or PDF  
